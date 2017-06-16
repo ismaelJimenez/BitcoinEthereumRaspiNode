@@ -52,6 +52,6 @@ Here you can see a device with hostname raspberrypi has IP address 192.168.2.109
 
 9. Open your terminal and type:
 ```
-ssh ubuntu@THE_IP_YOU_JUST_FOUND
-(password ubuntu)
+ssh pi@THE_IP_YOU_JUST_FOUND
+(password raspberry)
 ```
