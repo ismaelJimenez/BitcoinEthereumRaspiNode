@@ -6,5 +6,5 @@
 
 3. Identify its address by opening the "Disks" application and look for the "Device" line. If the line is in the /dev/mmcblk0p1 format, then your drive address is: /dev/mmcblk0. If it is in the /dev/sdb1 format, then the address is /dev/sdb
 
-4. Unmount it by right clicking in the square icon in the "Disks" application
+4. Unmount it by clicking in the square icon in the "Disks" application
 
