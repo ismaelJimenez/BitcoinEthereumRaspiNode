@@ -8,3 +8,12 @@
 
 4. Unmount it by clicking in the square icon in the "Disks" application
 
+5. Open a terminal (Ctrl+Alt+T) to copy the image to your removable drive
+```
+xzcat ~/Downloads/<image file .xz> | sudo dd of=<drive address> bs=32M
+```
+
+6. Then, run the sync command to finalize the process
+```
+sudo sync
+```
