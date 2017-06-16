@@ -1,6 +1,6 @@
-# Install Ubuntu Server on Raspberry Pi 3 (Headless)
+# Install Raspbian on Raspberry Pi 3 (Headless)
 
-1. Download [Ubuntu Core 16 image for Raspberry Pi 3](http://cdimage.ubuntu.com/ubuntu-core/16/stable/current/ubuntu-core-16-pi3.img.xz) in your **Downloads** folder.
+1. Download lastest [Raspbian](https://downloads.raspberrypi.org/raspbian_latest) in your **Downloads** folder and unzip it.
 
 2. Insert your SD card or USB flash drive
 
@@ -10,7 +10,7 @@
 
 5. Open a terminal (Ctrl+Alt+T) to copy the image to your removable drive
 ```
-xzcat ~/Downloads/<image file .xz> | sudo dd of=<drive address> bs=32M
+sudo dd if=~/Downloads/<image file> of=<drive address> bs=32M
 ```
 
 6. Then, run the sync command to finalize the process
@@ -22,4 +22,36 @@ sudo sync
 8. Install the nmap package
 ```
 sudo apt-get install nmap
+```
+
+To use nmap to scan the devices on your network, you need to know the subnet you are connected to. First find your own IP address, in other words the one of the computer you're using to find your Pi's IP address:
+
+type into a terminal window
+```
+hostname -I
+```
+Now you have the IP address of your computer, you will scan the whole subnet for other devices. For example, if your IP address is 192.168.2.5, other devices will be at addresses like 192.168.2.2, 192.168.2.3, 192.168.2.4, etc. The notation of this subnet range is 192.168.2.0/24 (this covers 192.168.2.0 to  192.168.2.255).
+
+Now use the nmap command with the -sn flag (ping scan) on the whole subnet range. This may take a few seconds:
+```
+nmap -sn 192.168.2.0/24
+```
+
+Ping scan just pings all the IP addresses to see if they respond. For each device that responds to the ping, the output shows the hostname and IP address like so:
+```
+Starting Nmap 6.40 ( http://nmap.org ) at 2017-06-16 18:31 CEST
+Nmap scan report for Ismael-MBP (192.168.2.4)
+Host is up (0.0010s latency).
+Nmap scan report for ubuntu (192.168.2.5)
+Host is up (0.0010s latency).
+Nmap scan report for raspberrypi (192.168.2.109)
+Host is up (0.0030s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.41 seconds
+```
+Here you can see a device with hostname raspberrypi has IP address 192.168.2.109.
+
+9. Open your terminal and type:
+```
+ssh ubuntu@THE_IP_YOU_JUST_FOUND
+(password ubuntu)
 ```
