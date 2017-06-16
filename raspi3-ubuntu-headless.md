@@ -17,3 +17,9 @@ xzcat ~/Downloads/<image file .xz> | sudo dd of=<drive address> bs=32M
 ```
 sudo sync
 ```
+7. You can now eject your removable drive, and put the SD card into the Raspberri.
+
+8. Install the nmap package
+```
+sudo apt-get install nmap
+```
