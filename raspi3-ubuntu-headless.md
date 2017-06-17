@@ -63,4 +63,11 @@ Scroll down and select VNC > Yes.
 11. If you're connecting from the compatible [VNC Viewer app from RealVNC](https://www.realvnc.com/download/viewer/), enter the user name and password you normally use to log in to your user account on the Raspberry Pi. By default, these credentials are pi and raspberry.
 
 # Install Bitcoin Core
-12. Follow instructions at https://bitcoin.org/en/full-node#ubuntu-1610
+12. Download latest Bitcoin core from https://bitcoin.org/en/download
+
+13. Type in a terminal
+```
+tar xzf bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
+sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.13.1/bin/*
+bitcoind -datadir=/media/pi/My_Files/bitcoin -daemon
+```
