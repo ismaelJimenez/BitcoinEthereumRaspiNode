@@ -8,15 +8,10 @@
 
 4. Unmount it by clicking in the square icon in the "Disks" application
 
-5. Open a terminal (Ctrl+Alt+T) to copy the image to your removable drive
-```
-sudo dd if=~/Downloads/<image file> of=<drive address> bs=32M
-```
+5. Select your card from the list on the left, choose “Restore Disk Image” from the cog menu on the right, and select your img file.
 
-6. Then, run the sync command to finalize the process
-```
-sudo sync
-```
+6. Enable SSH by placing a file named “ssh” (without any extension) onto the boot partition of the SD card
+
 7. You can now eject your removable drive, and put the SD card into the Raspberri.
 
 8. Install the nmap package
