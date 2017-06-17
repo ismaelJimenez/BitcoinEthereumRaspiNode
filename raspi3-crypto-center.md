@@ -1,4 +1,5 @@
-# Install Raspbian on Raspberry Pi 3 (Headless)
+# Raspberry 3 Cryptocurrency center for Bitcoin and Ethereum
+## Install Raspbian on Raspberry Pi 3 (Headless)
 
 1. Download lastest [Raspbian](https://downloads.raspberrypi.org/raspbian_latest) in your **Downloads** folder and unzip it.
 
@@ -62,7 +63,7 @@ Scroll down and select VNC > Yes.
 
 11. If you're connecting from the compatible [VNC Viewer app from RealVNC](https://www.realvnc.com/download/viewer/), enter the user name and password you normally use to log in to your user account on the Raspberry Pi. By default, these credentials are pi and raspberry.
 
-# Install Bitcoin Core
+## Install Bitcoin Core
 12. Download latest Bitcoin core from https://bitcoin.org/en/download
 
 13. Type in a terminal
@@ -71,7 +72,7 @@ tar xzf bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
 sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.13.1/bin/*
 bitcoind -datadir=/media/pi/My_Files/bitcoin
 ```
-# Install Ethereum
+## Install Ethereum
 14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
 
 # Usage
