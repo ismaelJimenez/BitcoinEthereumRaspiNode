@@ -1,3 +1,3 @@
 # Random How To´s
 
-- [Install Ubuntu Server on Raspberry Pi 3 (Headless)](../master/raspi3-ubuntu-headless.md)
+- [Raspberry 3 Cryptocurrency center for Bitcoin and Ethereum](../master/raspi3-ubuntu-headless.md)
