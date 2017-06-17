@@ -90,9 +90,16 @@ bitcoind -datadir=/media/pi/My_Files/bitcoin
 
 ## Ethereum
 ```
-geth --datadir <path to data directory>
+/home/<username>/go-ethereum/build/bin/geth --datadir <path to data directory>
 ```
 If hard drive is not ext4, then disable inter-process communication by adding --ipcdisable flag
 # Update
 ## Bitcoin
 * Check for updates in https://bitcoin.org/en/download, and if any follow steps 12 and 13
+
+## Ethereum
+```
+cd home/<username>/go-ethereum
+git pull
+make geth
+```
