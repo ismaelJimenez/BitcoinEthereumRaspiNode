@@ -74,7 +74,8 @@ bitcoind -datadir=/media/pi/My_Files/bitcoin -daemon
 # Install Ethereum
 14. [Download the archive](https://golang.org/dl/) and extract it into /usr/local, creating a Go tree in /usr/local/go. For example:
 ```
-tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+tar xzf go$VERSION.$OS-$ARCH.tar.gz
+sudo install -m 0755 -o root -g root -t /usr/local/bin go/bin/*
 ```
 
-14. Install Go as per https://golang.org/doc/install
+14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
