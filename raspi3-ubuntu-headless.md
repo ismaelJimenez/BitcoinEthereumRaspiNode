@@ -82,6 +82,10 @@ bitcoind -datadir=/media/pi/My_Files/bitcoin
 ### Usefull Commands
 * bitcoin-cli -datadir=/media/pi/My_Files/bitcoin getblockcount
 
+## Ethereum
+```
+geth --datadir <path to data directory>
+```
 
 # Update
 ## Bitcoin
