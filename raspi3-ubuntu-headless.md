@@ -79,3 +79,7 @@ sudo install -m 0755 -o root -g root -t /usr/local/bin go/bin/*
 ```
 
 14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
+
+# Update
+## Bitcoin
+* Check for updates in https://bitcoin.org/en/download, and if any follow steps 12 and 13
