@@ -75,6 +75,11 @@ bitcoind -datadir=/media/pi/My_Files/bitcoin
 ## Install Ethereum
 14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
 
+If error happens on make geth, try 
+```
+sudo apt --fix-broken install
+sudo apt-get install golang
+```
 # Usage
 ## Bitcoin
 ```
