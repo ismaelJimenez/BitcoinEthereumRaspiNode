@@ -54,3 +54,8 @@ ssh pi@THE_IP_YOU_JUST_FOUND
 ```
 sudo raspi-config
 ```
+Now, enable VNC Server by doing the following:
+
+Navigate to Interfacing Options.
+
+Scroll down and select VNC > Yes.
