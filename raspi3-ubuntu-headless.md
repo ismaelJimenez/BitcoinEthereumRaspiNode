@@ -78,7 +78,7 @@ tar xzf go$VERSION.$OS-$ARCH.tar.gz
 sudo install -m 0755 -o root -g root -t /usr/local/bin go/bin/*
 ```
 
-14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
+15. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
 
 # Update
 ## Bitcoin
