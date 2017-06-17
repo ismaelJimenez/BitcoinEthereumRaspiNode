@@ -63,8 +63,60 @@ Scroll down and select VNC > Yes.
 
 11. If you're connecting from the compatible [VNC Viewer app from RealVNC](https://www.realvnc.com/download/viewer/), enter the user name and password you normally use to log in to your user account on the Raspberry Pi. By default, these credentials are pi and raspberry.
 
+## Install Ethereum
+12. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
+
+If error happens on make geth, try 
+```
+sudo apt --fix-broken install
+sudo apt-get install golang
+```
 ## Install Bitcoin Core
-12. Download latest Bitcoin core from https://bitcoin.org/en/download
+13. Download and install the packages we will need for Bitcoin Core 
+```
+sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev -y
+```
+14. Download and install the packages we will need for bitcoin-qt
+```
+sudo apt-get install qt4-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev -y
+```
+15. Make a directory to download required files:
+```
+mkdir ~/bin
+cd ~/bin
+```
+Download the Berkeley database source code, unzip it, then build the BerkeleyDB.
+```
+wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
+tar -xzvf db-4.8.30.NC.tar.gz
+cd db-4.8.30.NC/build_unix/
+../dist/configure --enable-cxx
+make -j4
+```
+The "make -j4" command should take around 5 minutes to complete. If you get errors, then remove the "-j4" and just execute "make". This will take around 20 minutes.
+```
+sudo make install
+```
+16. Install Bitcoin
+```
+cd ~/
+git clone -b 0.13 https://github.com/bitcoin/bitcoin.git
+cd bitcoin/
+./autogen.sh
+./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" --enable-upnp-default --with-gui
+```
+For more info see: http://raspnode.com/diyBitcoin.html and https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
+
+17. Once that completes, then run:
+```
+make -j2
+```
+The "make -j2" command should take many hours. If you get errors using "-j2", then just run "make" but it will take around twice as long to build.
+```
+sudo make install
+```
+--- OLD ---
+13. Download latest Bitcoin core from https://bitcoin.org/en/download
 
 13. Type in a terminal
 ```
@@ -72,14 +124,7 @@ tar xzf bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
 sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.13.1/bin/*
 bitcoind -datadir=/media/pi/My_Files/bitcoin
 ```
-## Install Ethereum
-14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
-
-If error happens on make geth, try 
-```
-sudo apt --fix-broken install
-sudo apt-get install golang
-```
+--- OLD ---
 # Usage
 ## Bitcoin
 ```
