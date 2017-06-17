@@ -50,3 +50,7 @@ Here you can see a device with hostname raspberrypi has IP address 192.168.2.109
 ssh pi@THE_IP_YOU_JUST_FOUND
 (password raspberry)
 ```
+10. configure your Pi via
+```
+sudo raspi-config
+```
