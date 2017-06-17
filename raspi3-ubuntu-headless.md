@@ -71,3 +71,5 @@ tar xzf bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
 sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.13.1/bin/*
 bitcoind -datadir=/media/pi/My_Files/bitcoin -daemon
 ```
+#Install Ethereum
+14. Install Go as per https://golang.org/doc/install
