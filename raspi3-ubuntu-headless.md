@@ -69,16 +69,19 @@ Scroll down and select VNC > Yes.
 ```
 tar xzf bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
 sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.13.1/bin/*
-bitcoind -datadir=/media/pi/My_Files/bitcoin -daemon
+bitcoind -datadir=/media/pi/My_Files/bitcoin
 ```
 # Install Ethereum
-14. [Download the archive](https://golang.org/dl/) and extract it into /usr/local, creating a Go tree in /usr/local/go. For example:
-```
-tar xzf go$VERSION.$OS-$ARCH.tar.gz
-sudo install -m 0755 -o root -g root -t /usr/local/bin go/bin/*
-```
+14. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
 
-15. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
+# Usage
+## Bitcoin
+```
+bitcoind -datadir=/media/pi/My_Files/bitcoin
+```
+### Usefull Commands
+* bitcoin-cli -datadir=/media/pi/My_Files/bitcoin getblockcount
+
 
 # Update
 ## Bitcoin
