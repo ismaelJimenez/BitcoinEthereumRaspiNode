@@ -16,6 +16,8 @@ sudo apt-get -y dist-upgrade
 #Install dependencies
 echo -e "\e[34mInstalling Dependencies...\e[0m"
 sudo apt-get -y install dphys-swapfile build-essential libgmp3-dev golang git python curl
+sudo apt --fix-broken install
+sudo apt-get install golang
 
 #Install go-ethereum OR `geth`
 echo -e "\e[34mInstalling go-ethereum...\e[0m"
