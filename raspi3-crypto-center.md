@@ -83,6 +83,28 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 12. Connect the Raspi to the wifi and exit VNC mode. Connect again to the Raspi via ssh for the following steps of the tutorial.
 
+## Enlarge Swap File
+A swap file allows the microCD card to be used as extra memory if needed. It is slower and heavy use will shorten the life of a microSD card. Raspbian defaults to a 100Mb swap file which is not actually needed to build and run Bitcoin core under normal operating conditions. However if you are expecting to download the whole blockchain on the raspnode or the blockchain gets significantly behind, the downloading of extra blocks to catch up can exceed the built in memory and cause Bitcoin core to crash. Enlarging the swap file by a little bit protects against this possibility.
+
+Edit /etc/dphys-swap:
+```
+sudo nano /etc/dphys-swapfile
+```
+
+And change the default size of 100
+```
+CONF_SWAPSIZE=100
+```
+To 1000
+```
+CONF_SWAPSIZE=1000
+```
+Save and exit. Then run:
+```
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+```
+
 ## Install Ethereum
 13. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
 
