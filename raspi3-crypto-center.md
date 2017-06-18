@@ -1,7 +1,7 @@
 # Raspberry 3 Cryptocurrency center for Bitcoin and Ethereum
-## Install Ubuntu 16.04 Server on Raspberry Pi 3 (Headless)
+## Install Raspbian on Raspberry Pi 3 (Headless)
 
-1. Download [Ubuntu 16.04 Server](http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz) in your **Downloads** folder.
+1. Download lastest [Raspbian](https://downloads.raspberrypi.org/raspbian_latest) in your **Downloads** folder and unzip it.
 
 2. Insert your SD card or USB flash drive
 
@@ -9,13 +9,9 @@
 
 4. Unmount it by clicking in the square icon in the "Disks" application
 
-5. Open a terminal (Ctrl+Alt+T) to copy the image to your removable drive
-```
-xzcat ~/Downloads/<image file .xz> | sudo dd of=<drive address> bs=32M
-sudo sync
-```
+5. Select your card from the list on the left, choose “Restore Disk Image” from the cog menu on the right, and select your img file.
 
-For more information: https://wiki.ubuntu.com/ARM/RaspberryPi
+6. Enable SSH by placing a file named “ssh” (without any extension) onto the boot partition of the SD card
 
 7. You can now eject your removable drive, and put the SD card into the Raspberri.
 
