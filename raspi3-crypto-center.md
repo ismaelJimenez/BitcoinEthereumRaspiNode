@@ -113,6 +113,8 @@ If error happens on make geth, try
 sudo apt --fix-broken install
 sudo apt-get install golang
 ```
+Note: When asked accept default options, unless you know what you are doing.
+
 ## Install Bitcoin Core
 14. Download and install the packages we will need for Bitcoin Core 
 ```
