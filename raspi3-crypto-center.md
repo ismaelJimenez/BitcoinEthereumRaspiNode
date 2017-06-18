@@ -81,8 +81,10 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 11. If you're connecting from the compatible [VNC Viewer app from RealVNC](https://www.realvnc.com/download/viewer/), enter the user name and password you normally use to log in to your user account on the Raspberry Pi. By default, these credentials are pi and raspberry.
 
+12. Connect the Raspi to the wifi and exit VNC mode. Connect again to the Raspi via ssh for the following steps of the tutorial.
+
 ## Install Ethereum
-12. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
+13. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
 
 If error happens on make geth, try 
 ```
@@ -90,15 +92,15 @@ sudo apt --fix-broken install
 sudo apt-get install golang
 ```
 ## Install Bitcoin Core
-13. Download and install the packages we will need for Bitcoin Core 
+14. Download and install the packages we will need for Bitcoin Core 
 ```
 sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev -y
 ```
-14. Download and install the packages we will need for bitcoin-qt
+15. Download and install the packages we will need for bitcoin-qt
 ```
 sudo apt-get install qt4-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev -y
 ```
-15. Make a directory to download required files:
+16. Make a directory to download required files:
 ```
 mkdir ~/bin
 cd ~/bin
@@ -115,7 +117,7 @@ The "make -j4" command should take around 5 minutes to complete. If you get erro
 ```
 sudo make install
 ```
-16. Install Bitcoin
+17. Install Bitcoin
 ```
 cd ~/
 git clone -b 0.13 https://github.com/bitcoin/bitcoin.git
@@ -125,7 +127,7 @@ cd bitcoin/
 ```
 For more info see: http://raspnode.com/diyBitcoin.html and https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
 
-17. Once that completes, then run:
+18. Once that completes, then run:
 ```
 make -j2
 ```
