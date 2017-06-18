@@ -172,7 +172,7 @@ bitcoind -datadir=/media/pi/My_Files/bitcoin
 
 ## Ethereum
 ```
-/home/<username>/go-ethereum/build/bin/geth --datadir <path to data directory>
+~/go-ethereum/build/bin/geth --datadir <path to data directory>
 ```
 If hard drive is not ext4, then disable inter-process communication by adding --ipcdisable flag
 # Update
