@@ -61,6 +61,24 @@ Navigate to Interfacing Options.
 
 Scroll down and select VNC > Yes.
 
+Select "8 Advanced Options" then select "Hostname"
+
+Edit the hostname to “raspnode" without quotes (or to your desired hostname)
+
+Select "OK"
+
+Here you can also change the default user (which is "pi") and password (which is "raspberry"). We'll leave these as is for the tutorial. If you change your username, make sure to use that instead of "pi" when it shows up in this tutorial.
+
+To set your timezone:
+
+Select "4 Internationalisation Options"
+
+Select "Change Timezone"
+
+Go through the selection process to select your timezone, then select "OK"
+
+Once done, select "Finished" and your Raspberry Pi will reboot.
+
 11. If you're connecting from the compatible [VNC Viewer app from RealVNC](https://www.realvnc.com/download/viewer/), enter the user name and password you normally use to log in to your user account on the Raspberry Pi. By default, these credentials are pi and raspberry.
 
 ## Install Ethereum
