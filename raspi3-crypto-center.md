@@ -106,7 +106,7 @@ sudo dphys-swapfile swapon
 ```
 
 ## Install Ethereum
-13. Install geth with following script https://github.com/EthEmbedded/Raspi-Eth-Install/blob/master/geth-installer.sh
+13. Install geth with following script ../master/geth-installer.sh
 
 If error happens on make geth, try 
 ```
