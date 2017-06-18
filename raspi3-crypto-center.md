@@ -142,7 +142,7 @@ sudo make install
 17. Install Bitcoin
 ```
 cd ~/
-git clone -b 0.13 https://github.com/bitcoin/bitcoin.git
+git clone -b 0.14 https://github.com/bitcoin/bitcoin.git
 cd bitcoin/
 ./autogen.sh
 ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" --enable-upnp-default --with-gui
