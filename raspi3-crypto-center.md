@@ -106,9 +106,7 @@ sudo dphys-swapfile swapon
 ```
 
 ## Install Ethereum
-13. Install geth with following [script](../master/geth-installer.sh)
-
-When asked accept default options, unless you know what you are doing.
+Install geth with following [script](../master/geth-installer.sh). When asked accept default options, unless you know what you are doing.
 
 ## Install Bitcoin Core
 14. Download and install the packages we will need for Bitcoin Core 
