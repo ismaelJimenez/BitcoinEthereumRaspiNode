@@ -12,3 +12,6 @@ cd ~
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-arm7-1.6.5-cf87713d.tar.gz
 tar -xzvf geth-linux-arm7-1.6.5-cf87713d.tar.gz
 sudo cp geth-linux-arm7-1.6.5-cf87713d/geth /usr/local/bin
+rm geth-linux-arm7-1.6.5-cf87713d.tar.gz
+rm -rf geth-linux-arm7-1.6.5-cf87713d
+
