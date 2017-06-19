@@ -6,5 +6,5 @@ location=/media/pi/My_Files
 bitcoin-cli -datadir=$location/bitcoin stop
 
 #Stop ethereum
-echo -e "\e[34mStopping ethereum...\e[0m"
+echo "Ethereum server stopping"
 kill -SIGINT `pidof geth`
