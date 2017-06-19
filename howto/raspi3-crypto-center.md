@@ -89,6 +89,14 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 13. Copy [raspnode-stop](../master/scripts/raspnode-stop), [raspnode-start](../master/scripts/raspnode-start) and [raspnode-status](../master/scripts/raspnode-status) into /usr/local/bin
 
+14. Disable VNC server
+```
+sudo raspi-config
+```
+Navigate to Interfacing Options.
+
+Scroll down and select VNC > No.
+
 ## Enlarge Swap File
 A swap file allows the microCD card to be used as extra memory if needed. It is slower and heavy use will shorten the life of a microSD card. Raspbian defaults to a 100Mb swap file which is not actually needed to build and run Bitcoin core under normal operating conditions. However if you are expecting to download the whole blockchain on the raspnode or the blockchain gets significantly behind, the downloading of extra blocks to catch up can exceed the built in memory and cause Bitcoin core to crash. Enlarging the swap file by a little bit protects against this possibility.
 
