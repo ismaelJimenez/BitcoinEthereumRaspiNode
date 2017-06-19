@@ -127,7 +127,7 @@ geth --datadir <path to data directory>
 If hard drive is not ext4, then disable inter-process communication by adding --ipcdisable flag
 # Update
 ## Bitcoin
-* Check for updates in https://bitcoin.org/en/download. If any, update accordingly.
+* Check for updates in https://bitcoin.org/en/download. If any, update the version in the [bitcoin installer script](../master/bitcoin-installer.sh) and run it.
 
 ## Ethereum
-Check for new versions at https://geth.ethereum.org/downloads/. If any, update accordingly.
+Check for new versions at https://geth.ethereum.org/downloads/. If any, update the version in the [geth installer script](../master/geth-installer.sh) and run it.
