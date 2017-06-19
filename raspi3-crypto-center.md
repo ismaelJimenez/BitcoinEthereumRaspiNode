@@ -73,6 +73,10 @@ To set your timezone:
 
 Select "4 Localisation Options"
 
+Select "Change Locale"
+
+make sure en_US.UTF-8 is selected
+
 Select "Change Timezone"
 
 Go through the selection process to select your timezone, then select "OK"
