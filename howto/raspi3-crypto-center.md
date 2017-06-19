@@ -118,6 +118,11 @@ Install geth with following [script](../master/scripts/geth-installer.sh).
 Install bitcoin with following [script](../master/scripts/bitcoin-installer.sh).
 
 # Usage
+## Custom scripts
+* Execute raspnode_start script to start ethereum and bitcoin.
+* Execute raspnode_status script to check ethereum and bitcoin current sync status.
+* Execute raspnode_stop script to stop ethereum and bitcoin.
+
 ## Bitcoin
 ```
 bitcoind -datadir=/media/pi/My_Files/bitcoin
