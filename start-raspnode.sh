@@ -4,3 +4,7 @@ location=/media/pi/My_Files
 
 #Start bitcoin
 bitcoind -datadir=$location/bitcoin -daemon
+
+#Start ethereum
+nohup geth --datadir $location/ethereum 2>~/geth-log &
+disown
