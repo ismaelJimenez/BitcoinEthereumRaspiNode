@@ -2,5 +2,5 @@
 
 location=/media/pi/My_Files
 
-#Install bitcoin
+#Start bitcoin
 bitcoind -datadir=$location/bitcoin -daemon
