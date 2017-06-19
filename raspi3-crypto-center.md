@@ -106,62 +106,11 @@ sudo dphys-swapfile swapon
 ```
 
 ## Install Ethereum
-Install geth with following [script](../master/geth-installer.sh). When asked accept default options, unless you know what you are doing.
+Install geth with following [script](../master/geth-installer.sh).
 
 ## Install Bitcoin Core
-14. Download and install the packages we will need for Bitcoin Core 
-```
-sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev -y
-```
-15. Download and install the packages we will need for bitcoin-qt
-```
-sudo apt-get install qt4-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev -y
-```
-16. Make a directory to download required files:
-```
-mkdir ~/bin
-cd ~/bin
-```
-Download the Berkeley database source code, unzip it, then build the BerkeleyDB.
-```
-wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
-tar -xzvf db-4.8.30.NC.tar.gz
-cd db-4.8.30.NC/build_unix/
-../dist/configure --enable-cxx
-make -j4
-```
-The "make -j4" command should take around 5 minutes to complete. If you get errors, then remove the "-j4" and just execute "make". This will take around 20 minutes.
-```
-sudo make install
-```
-17. Install Bitcoin
-```
-cd ~/
-git clone -b 0.14 https://github.com/bitcoin/bitcoin.git
-cd bitcoin/
-./autogen.sh
-./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" --enable-upnp-default --with-gui
-```
-For more info see: http://raspnode.com/diyBitcoin.html and https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
+Install bitcoin with following [script](../master/bitcoin-installer.sh).
 
-18. Once that completes, then run:
-```
-make -j2
-```
-The "make -j2" command should take many hours. If you get errors using "-j2", then just run "make" but it will take around twice as long to build.
-```
-sudo make install
-```
---- OLD ---
-13. Download latest Bitcoin core from https://bitcoin.org/en/download
-
-13. Type in a terminal
-```
-tar xzf bitcoin-0.13.1-x86_64-linux-gnu.tar.gz
-sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.13.1/bin/*
-bitcoind -datadir=/media/pi/My_Files/bitcoin
-```
---- OLD ---
 # Usage
 ## Bitcoin
 ```
@@ -169,19 +118,16 @@ bitcoind -datadir=/media/pi/My_Files/bitcoin
 ```
 ### Usefull Commands
 * bitcoin-cli -datadir=/media/pi/My_Files/bitcoin getblockcount
+* bitcoin-cli -datadir=/media/pi/My_Files/bitcoin stop
 
 ## Ethereum
 ```
-~/go-ethereum/build/bin/geth --datadir <path to data directory>
+geth --datadir <path to data directory>
 ```
 If hard drive is not ext4, then disable inter-process communication by adding --ipcdisable flag
 # Update
 ## Bitcoin
-* Check for updates in https://bitcoin.org/en/download, and if any follow steps 12 and 13
+* Check for updates in https://bitcoin.org/en/download. If any, update accordingly.
 
 ## Ethereum
-```
-cd home/<username>/go-ethereum
-git pull
-make geth
-```
+Check for new versions at https://geth.ethereum.org/downloads/. If any, update accordingly.
