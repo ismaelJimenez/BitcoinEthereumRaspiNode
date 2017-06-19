@@ -87,7 +87,7 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 12. Connect the Raspi to the wifi and exit VNC mode. Connect again to the Raspi via ssh for the following steps of the tutorial.
 
-13. Copy raspnode-stop, raspnode-start and raspnode-status into /usr/local/bin
+13. Copy [raspnode-stop](../master/scripts/raspnode-stop), [raspnode-start](../master/scripts/raspnode-start) and [raspnode-status](../master/scripts/raspnode-status) into /usr/local/bin
 
 ## Enlarge Swap File
 A swap file allows the microCD card to be used as extra memory if needed. It is slower and heavy use will shorten the life of a microSD card. Raspbian defaults to a 100Mb swap file which is not actually needed to build and run Bitcoin core under normal operating conditions. However if you are expecting to download the whole blockchain on the raspnode or the blockchain gets significantly behind, the downloading of extra blocks to catch up can exceed the built in memory and cause Bitcoin core to crash. Enlarging the swap file by a little bit protects against this possibility.
@@ -112,10 +112,10 @@ sudo dphys-swapfile swapon
 ```
 
 ## Install Ethereum
-Install geth with following [script](../master/geth-installer.sh).
+Install geth with following [script](../master/scripts/geth-installer.sh).
 
 ## Install Bitcoin Core
-Install bitcoin with following [script](../master/bitcoin-installer.sh).
+Install bitcoin with following [script](../master/scripts/bitcoin-installer.sh).
 
 # Usage
 ## Bitcoin
@@ -133,7 +133,7 @@ geth --datadir <path to data directory>
 If hard drive is not ext4, then disable inter-process communication by adding --ipcdisable flag
 # Update
 ## Bitcoin
-* Check for updates in https://bitcoin.org/en/download. If any, update the version in the [bitcoin installer script](../master/bitcoin-installer.sh) and run it.
+* Check for updates in https://bitcoin.org/en/download. If any, update the version in the [bitcoin installer script](../master/scripts/bitcoin-installer.sh) and run it.
 
 ## Ethereum
-Check for new versions at https://geth.ethereum.org/downloads/. If any, update the version in the [geth installer script](../master/geth-installer.sh) and run it.
+Check for new versions at https://geth.ethereum.org/downloads/. If any, update the version in the [geth installer script](../master/scripts/geth-installer.sh) and run it.
