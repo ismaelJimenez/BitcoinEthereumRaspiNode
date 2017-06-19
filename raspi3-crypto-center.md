@@ -71,7 +71,7 @@ Here you can also change the default user (which is "pi") and password (which is
 
 To set your timezone:
 
-Select "4 Internationalisation Options"
+Select "4 Localisation Options"
 
 Select "Change Timezone"
 
