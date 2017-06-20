@@ -106,6 +106,16 @@ Navigate to Interfacing Options.
 
 Scroll down and select VNC > No.
 
+16. (Optional) Automatic SSH
+Execute this commands:
+```
+ssh-keygen
+```
+Then you'll need to copy the new key to your server:
+```
+ssh-copy-id pi@host
+```
+
 ## Enlarge Swap File
 A swap file allows the microCD card to be used as extra memory if needed. It is slower and heavy use will shorten the life of a microSD card. Raspbian defaults to a 100Mb swap file which is not actually needed to build and run Bitcoin core under normal operating conditions. However if you are expecting to download the whole blockchain on the raspnode or the blockchain gets significantly behind, the downloading of extra blocks to catch up can exceed the built in memory and cause Bitcoin core to crash. Enlarging the swap file by a little bit protects against this possibility.
 
