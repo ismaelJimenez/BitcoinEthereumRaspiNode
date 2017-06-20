@@ -89,10 +89,13 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 13. Copy [raspnode-stop](../master/scripts/raspnode-stop), [raspnode-start](../master/scripts/raspnode-start) and [raspnode-status](../master/scripts/raspnode-status) into /usr/local/bin and make the scripts executables.
 
-14. (Optional) Copy [raspnode-start](../master/scripts/raspnode-start) into /etc/init.d/ and make the script executable.
-Register script to be run at startup:
+14. (Optional) On your Pi, edit the file /etc/rc.local
 ```
-sudo update-rc.d superscript defaults
+sudo nano /etc/rc.local
+```
+and write *before* the "exit 0" line
+```
+/sbin/runuser pi -s /bin/bash -c "(sleep 10; raspnode-start)"
 ```
 
 15. (Optional) Disable VNC server
