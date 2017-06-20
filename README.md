@@ -1,4 +1,4 @@
-# Install and run a Bitcoin and Ethereum nodes in Raspberry 3
+# Install and run Bitcoin & Ethereum nodes in Raspberry 3
 ## Install Raspbian on Raspberry Pi 3 (Headless)
 
 1. Download lastest [Raspbian](https://downloads.raspberrypi.org/raspbian_latest) in your **Downloads** folder and unzip it.
