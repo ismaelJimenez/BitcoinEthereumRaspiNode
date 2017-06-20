@@ -89,7 +89,7 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 13. Copy [raspnode-stop](../master/scripts/raspnode-stop), [raspnode-start](../master/scripts/raspnode-start) and [raspnode-status](../master/scripts/raspnode-status) into /usr/local/bin
 
-14. Disable VNC server
+14. (Optional) Disable VNC server
 ```
 sudo raspi-config
 ```
