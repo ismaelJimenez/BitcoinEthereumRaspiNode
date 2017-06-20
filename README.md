@@ -175,3 +175,17 @@ If hard drive is not ext4, then disable inter-process communication by adding --
 
 ## Ethereum
 Check for new versions at https://geth.ethereum.org/downloads/. If any, update the version in the [geth installer script](../master/scripts/geth-installer.sh) and run it.
+
+## Check processor usage
+Install sysstat package using apt-get.
+```
+apt-get install sysstat
+```
+To get CPU utilization information, type in following command:
+```
+mpstat
+```
+To monitor individual processor performance, issue following command:
+```
+mpstat -P ALL
+```
