@@ -107,6 +107,7 @@ Navigate to Interfacing Options.
 Scroll down and select VNC > No.
 
 16. (Optional) Automatic SSH
+
 Execute this commands:
 ```
 ssh-keygen
