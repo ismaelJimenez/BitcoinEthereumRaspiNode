@@ -8,5 +8,4 @@ echo -e `bitcoin-cli -datadir=$location/bitcoin getblockcount` of `wget -O - htt
 
 echo -e "\e[34mEthereum latest action...\e[0m"
 tail -1 ~/geth-log
-
-
+truncate -s 0 ~/geth-log
