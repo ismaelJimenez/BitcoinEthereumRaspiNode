@@ -95,7 +95,7 @@ sudo nano /etc/rc.local
 ```
 and write *before* the "exit 0" line
 ```
-/sbin/runuser pi -s /bin/bash -c "(sleep 10; raspnode-start)"
+/sbin/runuser pi -s /bin/bash -c "(sleep 30; raspnode-start)"
 ```
 
 15. (Optional) Disable VNC server
