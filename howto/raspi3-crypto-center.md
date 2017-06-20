@@ -87,9 +87,15 @@ Once done, select "Finished" and your Raspberry Pi will reboot.
 
 12. Connect the Raspi to the wifi and exit VNC mode. Connect again to the Raspi via ssh for the following steps of the tutorial.
 
-13. Copy [raspnode-stop](../master/scripts/raspnode-stop), [raspnode-start](../master/scripts/raspnode-start) and [raspnode-status](../master/scripts/raspnode-status) into /usr/local/bin
+13. Copy [raspnode-stop](../master/scripts/raspnode-stop), [raspnode-start](../master/scripts/raspnode-start) and [raspnode-status](../master/scripts/raspnode-status) into /usr/local/bin and make the scripts executables.
 
-14. (Optional) Disable VNC server
+14. (Optional) Copy [raspnode-start](../master/scripts/raspnode-start) into /etc/init.d/ and make the script executable.
+Register script to be run at startup:
+```
+sudo update-rc.d superscript defaults
+```
+
+15. (Optional) Disable VNC server
 ```
 sudo raspi-config
 ```
