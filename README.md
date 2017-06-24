@@ -151,7 +151,7 @@ sudo nano /etc/sysctl.conf
 
 Append a config directive as follows:
 ```
-fs.file-max = 100000
+fs.file-max = 200000
 ```
 
 Save and close the file. Users need to log out and log back in again to changes take effect or just type the following command:
