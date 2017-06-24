@@ -144,12 +144,7 @@ sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
 ## Increase Raspi maximum number of openned files
-Geth needs this range quite higher. So you can increase the maximum number of open files by setting a new value in kernel variable /proc/sys/fs/file-max as follows:
-```
-sudo sysctl -w fs.file-max=100000
-```
-
-Above command forces the limit to 100000 files. You need to edit /etc/sysctl.conf file and put following line so that after reboot the setting will remain as it is:
+Geth needs this range quite higher. So you can increase the maximum number of open files by editing /etc/sysctl.conf file and putting the following line so that after reboot the setting will remain as it is:
 ```
 sudo nano /etc/sysctl.conf
 ```
