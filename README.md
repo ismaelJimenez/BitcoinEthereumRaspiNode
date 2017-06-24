@@ -143,27 +143,6 @@ Save and exit. Then run:
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
-## Increase Raspi maximum number of openned files
-Geth needs this range quite higher. So you can increase the maximum number of open files by editing /etc/sysctl.conf file and putting the following line so that after reboot the setting will remain as it is:
-```
-sudo nano /etc/sysctl.conf
-```
-
-Append a config directive as follows:
-```
-fs.file-max = 200000
-```
-
-Save and close the file. Users need to log out and log back in again to changes take effect or just type the following command:
-```
-sudo sysctl -p
-```
-
-Verify your settings with command:
-```
-cat /proc/sys/fs/file-max
-```
-
 ## Install Ethereum
 Install geth with following [script](../master/scripts/geth-installer.sh).
 
